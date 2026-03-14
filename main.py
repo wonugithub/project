@@ -14,8 +14,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# 발급받은 본인의 Gemini API 키를 입력하세요
-genai.configure(api_key="YOUR_NEW_API_KEY")
+genai.configure(api_key="api_key")
 model = genai.GenerativeModel('gemini-2.5-flash', generation_config={"response_mime_type": "application/json"})
 
 class IngredientRequest(BaseModel):
